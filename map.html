@@ -1,0 +1,28 @@
+<html>
+<head>
+
+<style>
+html, body { height: 100%; margin: 0; padding: 0; } #map { height: 100%; }
+</style>
+
+</head>
+<body>
+<div id="map"></div>
+
+<!-- Replace the value of the key parameter with your own API key. --> 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyrcYs5axq4OoUf9dEYddoabVkpLmNz0c&callback=initMap"> </script>
+<script>
+function initMap() { 
+var myLatLng = {lat: 36.778259, lng: -119.417931}; 
+//var position1 = {lat: 34.052235, lng: -118.243683};
+//var position2 = {lat: 32.7153, lng: -117.1564};
+//var position3 = {lat: 37.774930 , lng: -122.419420};
+
+var map = new google.maps.Map(document.getElementById('map'), { zoom: 4, center: myLatLng });
+var marker = new google.maps.Marker({ position: myLatLng, map: map, title: 'Hello California!' });
+var marker1 = new google.maps.Marker({ position: position1, map: map, title: 'Hello LA!' });
+var marker2 = new google.maps.Marker({ position: position2, map: map, title: 'Hello San diego!' });
+var marker3 = new google.maps.Marker({ position: position3, map: map, title: 'Hello San Francisco!' }); }
+
+</script>
+</body>
